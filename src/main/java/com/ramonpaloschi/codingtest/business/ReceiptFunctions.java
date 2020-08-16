@@ -17,7 +17,9 @@ import com.ramonpaloschi.codingtest.product.Product;
 public class ReceiptFunctions {
 
     //Calculate the total of a receipt.
-    //It sets the corresponding sales tax for each product and if it is imported.
+    //It sets the corresponding sales tax for each product.
+    //10% salesTax for all products except Books, Food and Medical products
+    //If the product is imported, it adds and extra 5% salesTax
     public static void calculateReceipt(Receipt receipt) {
         Money salesTaxes = receipt.getSalesTaxes();
         Money total = receipt.getTotal();

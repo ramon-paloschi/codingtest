@@ -16,6 +16,8 @@ import com.ramonpaloschi.codingtest.product.Product;
  */
 public class ReceiptFunctions {
 
+    //Calculate the total of a receipt.
+    //It sets the corresponding sales tax for each product and if it is imported.
     public static void calculateReceipt(Receipt receipt) {
         Money salesTaxes = receipt.getSalesTaxes();
         Money total = receipt.getTotal();
@@ -39,7 +41,7 @@ public class ReceiptFunctions {
                 taxRateValue = taxRateValue + 0.05;
             }
 
-            calculatereceiptLineTaxableAmount(receiptLine);
+            calculateReceiptLineTaxableAmount(receiptLine);
             calculateReceiptLineSalesTax(receiptLine, taxRateValue);
             calculateReceiptLineTotal(receiptLine);
 
@@ -49,7 +51,8 @@ public class ReceiptFunctions {
         }
     }
 
-    private static void calculatereceiptLineTaxableAmount(ReceiptLine receiptLine) {
+    //Calculate the taxable amount of a receipt line
+    private static void calculateReceiptLineTaxableAmount(ReceiptLine receiptLine) {
         Product product = receiptLine.getProduct();
         double amount = receiptLine.getAmount();
 
@@ -59,6 +62,7 @@ public class ReceiptFunctions {
         receiptLine.setTaxableAmount(taxableAmount);
     }
 
+    //Calculate the sales tax of a receipt line
     private static void calculateReceiptLineSalesTax(ReceiptLine receiptLine, double taxRate) {
         Money taxableAmount = receiptLine.getTaxableAmount();
 
@@ -70,6 +74,7 @@ public class ReceiptFunctions {
 
     }
 
+    //Calculate the total of a receipt line
     private static void calculateReceiptLineTotal(ReceiptLine receiptLine) {
         Money total = receiptLine.getTotal();
 
@@ -78,6 +83,7 @@ public class ReceiptFunctions {
         total.round();
     }
 
+    //Print the details of a receipt
     public static void printReceipt(Receipt receipt) {
 
         for (ReceiptLine receiptLine : receipt.getReceiptLines()) {

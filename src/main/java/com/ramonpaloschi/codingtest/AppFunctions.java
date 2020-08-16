@@ -54,46 +54,46 @@ public class AppFunctions {
 
         Food chocolateBar = new Food();
         chocolateBar.setManufacturer("Manufacturer 1");
-        chocolateBar.setName("Chocolate Bar 1");
+        chocolateBar.setName("Chocolate bar");
         chocolateBar.setCategory("Sweets");
         chocolateBar.setPrice(new Money(0.85));
         products.put(4, chocolateBar);
 
         Food chocolateBox1 = new Food();
         chocolateBox1.setManufacturer("Manufacturer 2");
-        chocolateBox1.setName("Chocolate Box 1");
+        chocolateBox1.setName("Box of chocolate 1");
         chocolateBox1.setCategory("Sweets");
         chocolateBox1.setPrice(new Money(10.00));
         products.put(5, chocolateBox1);
 
         Food chocolateBox2 = new Food();
         chocolateBox2.setManufacturer("Manufacturer 3");
-        chocolateBox2.setName("Chocolate Box 2");
+        chocolateBox2.setName("Box of chocolate 2");
         chocolateBox2.setCategory("Sweets");
         chocolateBox2.setPrice(new Money(11.25));
         products.put(6, chocolateBox2);
 
         Product perfume1 = new Product();
         perfume1.setManufacturer("Manufacturer 4");
-        perfume1.setName("Perfume 1");
+        perfume1.setName("Bottle of perfume 1");
         perfume1.setPrice(new Money(47.50));
         products.put(7, perfume1);
 
         Product perfume2 = new Product();
         perfume2.setManufacturer("Manufacturer 5");
-        perfume2.setName("Perfume 2");
+        perfume2.setName("Bottle of perfume 2");
         perfume2.setPrice(new Money(27.99));
         products.put(8, perfume2);
 
         Product perfume3 = new Product();
         perfume3.setManufacturer("Manufacturer 6");
-        perfume3.setName("Perfume 3");
+        perfume3.setName("Bottle of perfume 3");
         perfume3.setPrice(new Money(18.99));
         products.put(9, perfume3);
 
         Medical headachePills = new Medical();
         headachePills.setManufacturer("Manufacturer 7");
-        headachePills.setName("Headache Pills");
+        headachePills.setName("Packet of headache pills");
         headachePills.setPrice(new Money(9.75));
         headachePills.setExpirationDate(new Date("05/09/2023"));
         products.put(10, headachePills);

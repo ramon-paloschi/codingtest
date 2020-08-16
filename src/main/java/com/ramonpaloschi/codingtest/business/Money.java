@@ -56,6 +56,7 @@ public class Money {
         value = value.setScale(fractionalDigits, roundingMode);
     }
 
+    //Round up to the nearest 5 cents.
     public void roundToNearest5Cents() {
         value = value.divide(new BigDecimal("0.05")).setScale(0, BigDecimal.ROUND_UP).multiply(new BigDecimal("0.05"));
     }

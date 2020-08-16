@@ -21,8 +21,8 @@ import java.util.Map;
  */
 public class AppFunctions {
 
+    //Load some products into the App's productsData to use in the lastminute.com coding test.
     public static void loadProducts() {
-        //System.out.println("loadProducts");
         
         Map<Integer, Product> products = App.getProductsData();
 

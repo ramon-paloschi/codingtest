@@ -81,8 +81,13 @@ public class ReceiptFunctions {
     public static void printReceipt(Receipt receipt) {
 
         for (ReceiptLine receiptLine : receipt.getReceiptLines()) {
+            String importedOption = "";
+            if (receiptLine.isImportTax()) {
+                importedOption = "imported ";
+            }
             Product product = receiptLine.getProduct();
-            System.out.println(receiptLine.getAmount().intValue() + " " + product.getName() + " : " + receiptLine.getTotal().getValue());
+            String receiptLineOutput = receiptLine.getAmount().intValue() + " " + importedOption + product.getName() + " : " + receiptLine.getTotal().getValue();
+            System.out.println(receiptLineOutput);
         }
         System.out.println("Sales taxes: " + receipt.getSalesTaxes().toString());
         System.out.println("Total: " + receipt.getTotal().toString());

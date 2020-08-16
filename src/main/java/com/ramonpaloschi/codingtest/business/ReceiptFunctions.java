@@ -89,7 +89,7 @@ public class ReceiptFunctions {
             String receiptLineOutput = receiptLine.getAmount().intValue() + " " + importedOption + product.getName() + " : " + receiptLine.getTotal().getValue();
             System.out.println(receiptLineOutput);
         }
-        System.out.println("Sales taxes: " + receipt.getSalesTaxes().toString());
+        System.out.println("Sales Taxes: " + receipt.getSalesTaxes().toString());
         System.out.println("Total: " + receipt.getTotal().toString());
 
     }
